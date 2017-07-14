@@ -1,0 +1,142 @@
+{
+	"variables": [],
+	"info": {
+		"name": "Shop",
+		"_postman_id": "87446071-79a3-929f-4f3a-8f2afeacead5",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "API 1",
+			"request": {
+				"url": "http://192.168.0.119/shop/store/v1/get/39600/61200",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": "API 1"
+			},
+			"response": []
+		},
+		{
+			"name": "API 2",
+			"request": {
+				"url": "http://192.168.0.119/shop/product/v1/getPS/100/5",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "API 3",
+			"request": {
+				"url": "http://192.168.0.119/shop/record/v1/new/1/3/3/30/12245523",
+				"method": "POST",
+				"header": [],
+				"body": {},
+				"description": "API 3"
+			},
+			"response": []
+		},
+		{
+			"name": "API 4",
+			"request": {
+				"url": "http://192.168.0.119/shop/record/v1/getAfterTime/1490000000",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": "API 4"
+			},
+			"response": []
+		},
+		{
+			"name": "API 5",
+			"request": {
+				"url": "http://192.168.0.119/shop/common/v1/uploadImage",
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "images",
+							"description": "",
+							"type": "file",
+							"src": "test.png"
+						}
+					]
+				},
+				"description": "API 5"
+			},
+			"response": []
+		},
+		{
+			"name": "API 6",
+			"request": {
+				"url": "http://192.168.0.119/shop/product/v1/new/",
+				"method": "POST",
+				"header": [],
+				"body": {},
+				"description": "API 6"
+			},
+			"response": []
+		},
+		{
+			"name": "API 7",
+			"request": {
+				"url": "http://192.168.0.119/shop/product/v1/del/18",
+				"method": "DELETE",
+				"header": [],
+				"body": {},
+				"description": "API 7"
+			},
+			"response": []
+		},
+		{
+			"name": "API 8",
+			"request": {
+				"url": "http://192.168.0.119/shop/member/v1/getByPid/1",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": "API 8"
+			},
+			"response": []
+		},
+		{
+			"name": "API 9",
+			"request": {
+				"url": "http://192.168.0.119/shop/common/v1/getTotalCount",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": "API 9"
+			},
+			"response": []
+		},
+		{
+			"name": "API 10",
+			"request": {
+				"url": "http://192.168.0.119/shop/record/v1/getAfterTime/1490000000",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": "API 10"
+			},
+			"response": []
+		},
+		{
+			"name": "API 11",
+			"request": {
+				"url": "http://192.168.0.119/shop/buyer/v1/editInfo/6/nametest/addrtest",
+				"method": "PUT",
+				"header": [],
+				"body": {},
+				"description": "API 11"
+			},
+			"response": []
+		}
+	]
+}
