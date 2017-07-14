@@ -11,6 +11,8 @@ class CommonRoute extends Route
         $commonController->get('/v1/getTotalCount', 'getTotalCount');
         $commonController->post('/v1/uploadImage','uploadImg');
 
+        $commonController->post('/v1/pushIphone','pushIphone');
+
         $app->mount($commonController);
     }
 }
