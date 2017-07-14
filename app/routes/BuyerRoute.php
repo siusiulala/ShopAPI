@@ -8,8 +8,7 @@ class BuyerRoute extends Route
         $buyerController = new MicroCollection();
         $buyerController->setHandler('BuyerController', true);
         $buyerController->setPrefix('/buyer');
-        $buyerController->get('/v1/get', 'getAllBuyers');
-        $buyerController->get('/v1/getByPid/{pid}/', 'getByPid');
+        $buyerController->put('/v1/editInfo/{bid}/{name}/{addr}', 'editInfo');
         $app->mount($buyerController);
     }
 }

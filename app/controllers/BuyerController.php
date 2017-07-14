@@ -1,23 +1,27 @@
 <?php
+require_once dirname(__FILE__) . "/../modules/dumpResult.php";
 
 class BuyerController extends \Phalcon\Mvc\Controller
 {
 
-    public function getAllBuyers()
+    public function editInfo($bid,$name,$addr)
     {
-        $data = Buyer::find();
-        $result = array();
-        $i = 0;
-        if (count($data) > 0) {
-            foreach ($data as $item) {
-//                $result[$i]['memberID'] = $item->memberID;
-//                $result[$i]['type'] = $item->type;
-
-                $i++;
-            }
-
-            dumpResult(ResultMsgCode::SUCCESS_CALL, ResultStatus::SUCCESS_CALL,$result);
+        $buyer = Buyer::findFirst("bid = '{$bid}'");
+        if($buyer==false) {
+            dumpResult(ResultMsgCode::OTHER_ERROR, ResultStatus::OTHER_ERROR, "Buyer no found");
+            exit();
         }
+
+        $buyer->name = $name;
+        $buyer->address = $addr;
+
+        if($buyer->update()==false) {
+            dumpResult(ResultMsgCode::OTHER_ERROR, ResultStatus::OTHER_ERROR, "編輯失敗");
+            exit();
+        }
+
+        dumpResult(ResultMsgCode::SUCCESS_CALL, ResultStatus::SUCCESS_CALL,"編輯成功");
+
 
     }
 

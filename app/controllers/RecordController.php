@@ -45,6 +45,25 @@ class RecordController extends \Phalcon\Mvc\Controller
 
     }
 
+    public function getConsumeByBuyer()
+    {
+        $sql = "CALL `sp_get_buyer_total_consume`();";
+//        $con = new Phalcon\Db\Adapter\Pdo\Mysql(array(
+//            'host' => '192.168.0.119',
+//            'username' => 'root',
+//            'password' => 'root',
+//            'dbname' => 'shop',
+//            'charset' => 'utf8'
+//        ));
+//        $con->connect();
+        $result = $this->db->query($sql);
+        $result->setFetchMode(Phalcon\Db::FETCH_ASSOC);
+        $result = $result->fetchAll($result);
+
+        dumpResult(ResultMsgCode::SUCCESS_CALL, ResultStatus::SUCCESS_CALL,$result);
+
+    }
+
     public function newRecord($bid,$sid,$pid,$count,$time)
     {
         $rcd = new Record();
